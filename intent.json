@@ -1,0 +1,89 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "jarvis assistant",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "dismissed",
+                        "that will be all",
+                        "power off",
+                        "shut down",
+                        "goodbye jarvis"
+                    ]
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [
+                        {
+                            "name": "catchAll",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{catchAll}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "hello",
+                        "how are you",
+                        "say hi world",
+                        "say hi",
+                        "hi",
+                        "say hello world",
+                        "say hello"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "HelloWorldIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "catchAll",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.868152638617.1745729455742"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.868152638617.1745729455742",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Jarvis online. How can I assist you today Manoj sir?"
+                    }
+                ]
+            }
+        ]
+    }
+}
