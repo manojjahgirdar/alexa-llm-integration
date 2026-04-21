@@ -1,0 +1,89 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "catchAll",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.868152638617.1745729455742"
+              }
+            }
+          ],
+          "name": "HelloWorldIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "dismissed",
+            "that will be all",
+            "power off",
+            "shut down",
+            "goodbye jarvis"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "catchAll",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{catchAll}"
+              ]
+            }
+          ],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": [],
+      "invocationName": "jarvis assistant"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Jarvis online. How can I assist you today Manoj sir?"
+          }
+        ],
+        "id": "Elicit.Slot.868152638617.1745729455742"
+      }
+    ]
+  }
+}

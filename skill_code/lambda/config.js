@@ -1,0 +1,3 @@
+const OPENAI_API_KEY = "<YOUR_GROQ_API_KEY>";
+
+module.exports = { OPENAI_API_KEY };
